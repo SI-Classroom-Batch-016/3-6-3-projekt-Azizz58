@@ -35,6 +35,7 @@ data class CryptoModel(
     val close:Double,
     val high:Double,
     val low:Double,
+    val dailyChange:Double,
     val dailyVol:Double,
     val symbolLogo:String="",
 
@@ -42,6 +43,7 @@ data class CryptoModel(
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
         parcel.readString().toString(),
+        parcel.readDouble(),
         parcel.readDouble(),
         parcel.readDouble(),
         parcel.readDouble(),
@@ -106,6 +108,7 @@ data class CryptoModel(
         parcel.writeDouble(close)
         parcel.writeDouble(high)
         parcel.writeDouble(low)
+        parcel.writeDouble(dailyChange)
         parcel.writeDouble(dailyVol)
         parcel.writeString(symbolLogo)
     }

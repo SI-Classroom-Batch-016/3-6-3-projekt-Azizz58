@@ -231,6 +231,7 @@
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingBottom="80dp"
                 android:layout_marginTop="16dp" />
 
 
@@ -256,6 +257,7 @@
                 android:layout_gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/bottomBTN1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -264,14 +266,14 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/wallet" />
 
                     <TextView
-                        android:id="@+id/textView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -281,6 +283,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id='@+id/bottomBTN2'
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -289,14 +292,14 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/market" />
 
                     <TextView
-                        android:id="@+id/textView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -306,6 +309,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bottomBTN3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -314,14 +318,14 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/trade" />
 
                     <TextView
-                        android:id="@+id/textView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -331,6 +335,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bottoBTN4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -339,14 +344,14 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/futures" />
 
                     <TextView
-                        android:id="@+id/textView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -356,6 +361,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bottomBTN5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -364,14 +370,14 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/profile" />
 
                     <TextView
-                        android:id="@+id/textView4"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
