@@ -6,10 +6,12 @@
     <color name="red">#c9454f</color>
     <color name="green">#2fc36b</color>
     <color name="grey">#565d6c</color>
-    <color name="background">#131e2e</color>
+    <color name="background">#ED061227</color>
     <color name="black1">#121b29</color>
     <color name="black2">#1b2129</color>
     <color name="black3">#282f3c</color>
     <color name="white_half">#10ffffff</color>
     <color name="light_grey">#565d6c</color>
-    </resources>
+    <color name="transparent">#00565D6C</color>
+    <color name="dark_green">#0D2C35</color>
+</resources>
