@@ -34,6 +34,7 @@ class DetailCryptoFragment : Fragment() {
         binding.backBTN.setOnClickListener {
             backToHomescreen()
 
+
         }
         return binding.root
     }

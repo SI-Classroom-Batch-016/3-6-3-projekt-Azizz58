@@ -9,4 +9,5 @@ data class Cryptos(
     val amount: String,
     val value: String
 
+
 )

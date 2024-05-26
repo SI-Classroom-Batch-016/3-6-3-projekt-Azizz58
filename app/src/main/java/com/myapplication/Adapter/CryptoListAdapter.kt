@@ -39,6 +39,7 @@ class CryptoListAdapter(
             holder.binding.coinPercentTv.setTextColor(holder.binding.root.context.getColor(R.color.green))
         }
 
+
         // Set click listener
         holder.itemView.setOnClickListener { onItemClicked(item) }
 

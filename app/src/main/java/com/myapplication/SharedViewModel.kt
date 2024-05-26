@@ -25,3 +25,4 @@ class SharedViewModel : ViewModel() {
         _selectedCryptoDetail.value = detail
     }
 }
+

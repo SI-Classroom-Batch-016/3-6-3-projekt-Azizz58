@@ -26,4 +26,5 @@ data class CrpytosDetail(
     val buyAmount4: Double,
     val buyAmount5: Double,
     val amount: Double
+
 )

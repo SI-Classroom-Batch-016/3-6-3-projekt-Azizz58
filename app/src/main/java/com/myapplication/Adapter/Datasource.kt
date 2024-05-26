@@ -11,6 +11,7 @@ object Datasource {
         Cryptos(R.drawable.etherium, "Ethereum", "$3,738.52", +1.12, "0.1778542 ETH", "$435,676")
     )
 
+
     val cryptosDetailList: List<CrpytosDetail> = listOf(
         CrpytosDetail(
             R.drawable.etherium, "Ethereum", "$3,738.52", +1.12,

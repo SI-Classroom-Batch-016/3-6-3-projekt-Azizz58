@@ -8,6 +8,7 @@
     android:background="@drawable/trading_bg"
     tools:context="com.myapplication.LoginFragment">
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/usernameEDT"
         android:layout_width="284dp"

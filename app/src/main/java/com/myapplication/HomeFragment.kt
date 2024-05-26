@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val data = Datasource.cryptosList
 
         val recyclerView = binding.recyclerView1
