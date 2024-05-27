@@ -41,6 +41,5 @@ class HomeFragment : Fragment() {
             )
             findNavController().navigate(action)
         }
-        recyclerView.layoutManager = LinearLayoutManager(context)
     }
 }

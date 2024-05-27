@@ -46,7 +46,7 @@ class DetailCryptoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        var isClicked: Boolean = false
 
         viewModel.selectedCryptoDetail.observe(viewLifecycleOwner) { cryptoDetail ->
             cryptoDetail?.let {
@@ -73,9 +73,25 @@ class DetailCryptoFragment : Fragment() {
                 binding.aBuyTXT3.text = it.buyAmount3.toString()
                 binding.aBuyTXT4.text = it.buyAmount4.toString()
                 binding.aBuyTXT5.text = it.buyAmount5.toString()
+                binding.likeBTN.setOnClickListener {
+
+                    if (isClicked) {
+                        binding.likeBTN.setImageResource(R.drawable.favorite_filled)
+                        binding.likeBTN.animate().apply {
+                            duration = 1000
+                            rotationYBy(360f)
 
 
-                // Set text color based on the percent value
+                        }.start()
+                    } else {
+                        binding.likeBTN.setImageResource(R.drawable.favorite)
+                    }
+                    isClicked = !isClicked
+                }
+
+
+
+                // Textfarbe basierend auf dem Prozentwert setzen
                 val changePercent = it.changePercent
                 val textColor = if (changePercent < 0) {
                     ContextCompat.getColor(requireContext(), R.color.red)
@@ -91,6 +107,11 @@ class DetailCryptoFragment : Fragment() {
     }
 
 
+
+
+
+
+
     private fun setVariable() {
         binding.buyPositionBTN.setOnClickListener {
             binding.buyPositionBTN.setBackgroundResource(R.drawable.green_bg)
@@ -98,6 +119,8 @@ class DetailCryptoFragment : Fragment() {
             binding.sendOrderBTN.setBackgroundResource(R.drawable.green_bg)
             binding.sendOrderBTN.setText("Buy " + item.symbol.replace("/USDT", ""))
         }
+        // OnClickListener Buy-Button , der  Hintergrundbild des Buttons und anderer UI-Elemente ändert und den Text des Buttons 'sendOrderBTN' auf "Buy" setzt.
+
 
         binding.seellPositionBTN.setOnClickListener {
             binding.buyPositionBTN.setBackgroundResource(R.drawable.semi_white_bg)
@@ -112,6 +135,9 @@ class DetailCryptoFragment : Fragment() {
             var n: Double = binding.amountEDIT.text.toString().toDouble()
             n = n + 1
             binding.amountEDIT.setText(n.toString())
+            //OnClickListener für, der  Menge im EditText 'amountEDIT' um 1 erhöht.
+
+
         }
         binding.minusAmountBTN.setOnClickListener {
             if (binding.amountEDIT.text.isEmpty()) {

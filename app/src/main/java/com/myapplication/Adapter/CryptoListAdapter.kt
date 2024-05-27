@@ -25,13 +25,13 @@ class CryptoListAdapter(
         val item = dataset[position]
 
         holder.binding.coinLogoIMG.setImageResource(item.logo)
-        holder.binding.coinNameTV.text = item.name.toString()
+        holder.binding.coinNameTV.text = item.name
         holder.binding.coinPriceTV.text = item.price
         holder.binding.coinPercentTv.text = item.percent.toString()
-        holder.binding.coinAmountTv.text = item.amount.toString()
-        holder.binding.coinValueTV.text = item.value.toString()
+        holder.binding.coinAmountTv.text = item.amount
+        holder.binding.coinValueTV.text = item.value
 
-        // Set text color based on the percent value
+        // Setzt die Textfarbe basierend auf dem Prozentwert (grün wenn <0, rot wenn >0)
         val percent = item.percent
         if (percent < 0) {
             holder.binding.coinPercentTv.setTextColor(holder.binding.root.context.getColor(R.color.red))
@@ -42,6 +42,8 @@ class CryptoListAdapter(
 
         // Set click listener
         holder.itemView.setOnClickListener { onItemClicked(item) }
+        // OnClickListener für Listenelement, der Lambda 'onItemClicked' aufruft und aktuelle Krypto-Objekt 'item' übergibt, wenn das Listenelement geklickt wird.
+
 
     }
 }
