@@ -1,5 +1,6 @@
 package com.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -133,7 +134,7 @@ class DetailCryptoFragment : Fragment() {
                 binding.amountEDIT.setText("0")
             }
             var n: Double = binding.amountEDIT.text.toString().toDouble()
-            n = n + 1
+            n += 1
             binding.amountEDIT.setText(n.toString())
             //OnClickListener für, der  Menge im EditText 'amountEDIT' um 1 erhöht.
 
@@ -145,9 +146,22 @@ class DetailCryptoFragment : Fragment() {
             }
             var n: Double = binding.amountEDIT.text.toString().toDouble()
             if (n > 0) {
-                n = n - 1
+                n -= 1
                 binding.amountEDIT.setText(n.toString())
             }
         }
+        // Share button implementieren
+        binding.shareBTN.setOnClickListener {
+            shareCryptoDetail(item.symbol, item.price)
+        }
+    }
+
+    private fun shareCryptoDetail(symbol: String, price: String) {
+        val shareIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_SUBJECT, "Teile diese Kryptowährung")
+            putExtra(Intent.EXTRA_TEXT, "Schau dir diese Kryptowährung an: $symbol zu einem Preis von $price")
+        }
+        startActivity(Intent.createChooser(shareIntent, "Teilen über"))
     }
 }
